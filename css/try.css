@@ -130,12 +130,12 @@ html {
 }
 
 .burger-icon.active {
-  margin-left: 33vh;
+  margin-left: 44vh;
 }
 
 /* Tambahkan transition untuk perubahan margin */
 .burger-icon {
-  margin-left: 11vh;
+  margin-left: 16vh;
   transition: margin-left 0.5s;
 }
 
