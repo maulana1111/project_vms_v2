@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $('#main-menu .has-submenu').prepend('<i class="fas fa-chevron-down submenu-toggle" style="display:none"></i>');
     // Tambahkan event click pada setiap elemen dengan class 'has-submenu'
     $("#main-menu .has-submenu").click(function (e) {
       e.stopPropagation(); // Mencegah event klik menyebar ke elemen lain
@@ -15,10 +16,8 @@ $(document).ready(function () {
       console.log(submenu);
       if (submenu.length > 0) {
         submenu.toggleClass("active");
-        console.log("hit2");
       } else {
         // Jika tidak ada submenu, tambahkan class "menu-selected"
-        console.log("hit");
         submenu.toggleClass("menu-selected");
         // $(this).addClass('menu-selected');
       }

@@ -90,6 +90,10 @@ html {
   border-radius: 3px;
 }
 
+.logo{
+  padding-left: 14px;
+}
+
 .form-login > button {
   margin: auto;
   width: 132px;
@@ -113,6 +117,7 @@ html {
   padding-top: 10px;
   transition: 0.5s;
   box-shadow: 1px 0px 7px gray;
+  z-index: 11;
 }
 
 .navbar {
@@ -130,12 +135,12 @@ html {
 }
 
 .burger-icon.active {
-  margin-left: 44vh;
+  margin-left: 305px;
 }
 
 /* Tambahkan transition untuk perubahan margin */
 .burger-icon {
-  margin-left: 16vh;
+  margin-left: 105px;
   transition: margin-left 0.5s;
 }
 
@@ -147,12 +152,42 @@ ul ul {
   display: none;
 }
 
+ul li ul {
+  margin-left: -25px;
+}
+
 ul li {
+  margin-bottom: 10px;
+  color: #747272;
+  border-radius: 10px;
+}
+
+ul li.active{
+  background-color: #74C1F1;
+  color: black;
+  border-radius: 10px;
+  padding: 4px 8px;
   margin-bottom: 10px;
 }
 
 ul li i {
   margin-right: 15px;
+}
+
+ul li span {
+  display: none;
+}
+
+ul li span.active {
+  display: contents;
+}
+
+#text-logo {
+  display: none;
+}
+
+#text-logo.active {
+  display: contents;
 }
 
 .active {
@@ -165,8 +200,8 @@ ul li i {
 
 .menu {
   background-color: white;
-  width: 225px;
-  margin: auto;
+  max-width: 225px;
+  margin: 0 14px;
   padding: 5px 15px;
   border-radius: 8px;
   margin-top: 20px;
@@ -178,4 +213,10 @@ ul li i {
 
 .has-submenu > ul {
   margin-top: 10px;
+}
+
+.submenu-toggle.active {
+  cursor: pointer;
+  float: right;
+  margin-left: 5px; /* Mengatur jarak antara ikon dan teks */
 }
