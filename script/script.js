@@ -5,6 +5,8 @@ function toggleSidebar() {
   var submenutoggle = document.querySelectorAll(".submenu-toggle");
   var spans = document.querySelectorAll("ul li span");
   var ul_li = document.querySelectorAll("ul li");
+  var main_menu = document.querySelector("#main_menu");
+  // console.log(main_menu.style.height);
 
   if (sidebar.style.width === "270px") {
     sidebar.style.width = "75px";

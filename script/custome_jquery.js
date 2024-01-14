@@ -34,7 +34,9 @@ $(document).ready(function () {
 
     // Tambahkan event click pada dokumen untuk menutup submenu ketika mengklik area di luar submenu
     $(document).click(function () {
-      $("#main-menu .has-submenu").removeClass("active");
-      $("#main-menu .has-submenu ul").removeClass("active");
+      if (!$(e.target).closest('.has-submenu').length) {
+        $("#main-menu .has-submenu").removeClass("active");
+        $("#main-menu .has-submenu ul").removeClass("active");
+      }
     });
   });
