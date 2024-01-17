@@ -4,7 +4,7 @@ function toggleSidebar() {
   var burgerIcon = document.querySelector(".burger-icon");
   var submenutoggle = document.querySelectorAll(".submenu-toggle");
   var spans = document.querySelectorAll("ul li span");
-  var ul_li = document.querySelectorAll("ul li");
+  var ul_li = document.querySelectorAll("ul li a");
   var main_menu = document.querySelector("#main_menu");
   // console.log(main_menu.style.height);
 

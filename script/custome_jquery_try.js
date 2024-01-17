@@ -2,10 +2,17 @@ $(document).ready(function () {
   $("#main-menu .has-submenu > a").prepend(
     '<i class="fas fa-chevron-down submenu-toggle" style="display:none"></i>'
   );
+  $('ul li a').click(function() {
+    // console.log('Clicked:', $(this).text());
+    if ($(this).hasClass('active')){
+      $(this).removeClass("active")
+    }else{
+      $(this).addClass("active")
+    }
+  });
   // Tambahkan event click pada setiap elemen dengan class 'has-submenu'
   $("#main-menu .has-submenu").click(function (e) {
     e.stopPropagation(); // Mencegah event klik menyebar ke elemen lain
-    $(this).find('.has-submenu.active ul').removeClass('active');
 
     // Tutup semua submenu kecuali yang sesuai dengan yang diklik
     $(this).siblings(".has-submenu").removeClass("active");
@@ -16,14 +23,12 @@ $(document).ready(function () {
 
     // Toggle kelas 'active' pada submenu
     var submenu = $(this).children("ul");
-    console.log(submenu);
+    // console.log(submenu);
     if (submenu.length > 0) {
       submenu.toggleClass("active");
     }
     // Toggle kelas 'active' pada tag <a>
     $(this).children("a").toggleClass("active");
-
-    //  $(this).siblings('.has-submenu:(.active)').find('ul').removeClass('active');
   });
 
   // Tambahkan event click pada dokumen untuk menutup submenu ketika mengklik area di luar submenu

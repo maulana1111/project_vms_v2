@@ -162,13 +162,16 @@ ul li {
   border-radius: 10px;
 }
 
-ul li.menu-selected{
-  background-color: #74C1F1;
+.nav-link{
   color: black;
   border-radius: 10px;
-  padding: 4px 8px;
   margin-bottom: 10px;
   height: 23px;
+}
+
+.nav-link.active{
+  background-color: #74C1F1;
+  padding: 4px 8px;
 }
 
 ul li i {
@@ -202,7 +205,6 @@ ul li span.active {
   padding: 5px 15px;
   border-radius: 8px;
   margin-top: 20px;
-  height: 80%;
 }
 
 #main-menu {
